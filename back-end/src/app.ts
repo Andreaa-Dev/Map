@@ -13,4 +13,4 @@ app.use(cors());
 
 app.use("/v1/fetchMap", mapRouter);
 
-app.listen(5003);
+app.listen(process.env.PORT || 5003);

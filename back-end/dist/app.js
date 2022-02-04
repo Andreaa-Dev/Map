@@ -12,5 +12,5 @@ const app = (0, express_1.default)();
 app.set("port", process.env.PORT || 3003);
 app.use((0, cors_1.default)());
 app.use("/v1/fetchMap", map_1.default);
-app.listen(5003);
+app.listen(process.env.PORT || 5003);
 //# sourceMappingURL=app.js.map
