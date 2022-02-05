@@ -20,7 +20,7 @@ function App() {
   });
   const helsinkiCoordinates: [number, number] = [24.945831, 60.192059];
 
-  const url = "http://localhost:5003/v1/fetchMap";
+  const url = "https://andre-map.herokuapp.com/v1/fetchMap";
 
   const [place, setPlace] = useState<PlaceType[]>([]);
 

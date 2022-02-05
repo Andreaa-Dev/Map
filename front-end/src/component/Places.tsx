@@ -47,7 +47,7 @@ function Places({ item }: ItemPropType) {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
     const data = axios
-      .get(`http://localhost:5003/v1/fetchMap/${item.id}`)
+      .get(`https://andre-map.herokuapp.com/v1/fetchMap/${item.id}`)
       .then((response) => {
         setLocation(response.data);
       })
