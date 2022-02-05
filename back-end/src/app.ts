@@ -14,3 +14,5 @@ app.use(cors());
 app.use("/v1/fetchMap", mapRouter);
 
 app.listen(process.env.PORT || 5003);
+
+export default app;
