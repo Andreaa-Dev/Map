@@ -1,9 +1,8 @@
 import axios from "axios";
 import request from "supertest";
+import "@types/jest";
 
 import app from "../../src/app";
-
-jest.mock(axios);
 
 const BASE_URL = "https://jsonplaceholder.typicode.com";
 
@@ -15,4 +14,10 @@ const fetchFunction = async () => {
   }
 };
 
-async function fetchMap() {}
+jest.mock("axios");
+
+describe("fetchFunction", () => {
+  describe("When API call is successful", () => {
+    it("should return Helsinki map", async () => {});
+  });
+});

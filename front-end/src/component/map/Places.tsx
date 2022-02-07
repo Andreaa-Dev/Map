@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import { PlaceType } from "../App";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import MarkerComponent from "./MarkerComponent";
 import Popover from "@mui/material/Popover";
 import Typography from "@mui/material/Typography";
+
+import { PlaceType } from "../../App";
 
 export type ItemPropType = {
   item: PlaceType;
@@ -19,30 +16,10 @@ function Places({ item }: ItemPropType) {
       en: string;
     };
     description: { body: string };
-
     info_url: string;
   }>({ name: { en: "" }, description: { body: "" }, info_url: "" });
 
-  const [placeInformation, setPlaceInformation] = useState([]);
-
-  // const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  // const open = Boolean(anchorEl);
-  // const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-  //   const data = axios
-  //     .get(`http://localhost:5003/v1/fetchMap/${item.id}`)
-  //     .then((response) => {
-  //       setLocation(response.data);
-  //     })
-  //     .catch((error) => console.log(error));
-  //   setAnchorEl(event.currentTarget);
-  // };
-  // const handleClose = () => {
-  //   setAnchorEl(null);
-  // };
-
-  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
-    null
-  );
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -57,7 +34,6 @@ function Places({ item }: ItemPropType) {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  console.log(location, "f");
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 
