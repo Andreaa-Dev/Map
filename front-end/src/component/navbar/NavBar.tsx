@@ -175,7 +175,7 @@ export default function PrimarySearchAppBar() {
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            HELSINKI MAP
+            EXPLORE HELSINKI
           </Typography>
           <Search>
             <SearchIconWrapper>

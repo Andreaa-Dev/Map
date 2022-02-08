@@ -5,8 +5,7 @@ import Places from "./Places";
 
 function MapComponent({ place }: PlacePropType) {
   const Map = ReactMapboxGl({
-    accessToken:
-      "pk.eyJ1IjoiYW5kcmVhMmsiLCJhIjoiY2t6OGd6cGc0MWN6bTJudXNvN205Z2lsMSJ9.cP0F-8mYYwS1QlfO9djtAQ",
+    accessToken: process.env.REACT_APP_MAP_TOKEN,
   });
 
   const helsinkiCoordinates: [number, number] = [24.945831, 60.192059];
@@ -15,7 +14,7 @@ function MapComponent({ place }: PlacePropType) {
       // eslint-disable-next-line
       style="mapbox://styles/mapbox/streets-v9"
       containerStyle={{
-        height: "100vh",
+        height: "60vh",
         width: "100vw",
       }}
       center={helsinkiCoordinates}

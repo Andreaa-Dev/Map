@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-
+import { Routes, Route, Link } from "react-router-dom";
 import "mapbox-gl/dist/mapbox-gl.css";
 import axios from "axios";
 
+import helsinki from "./image/helsinki.jpeg";
 import NavBar from "./component/navbar/NavBar";
+import LandingPage from "./component/landingPage";
 import MapComponent from "./component/map/MapComponent";
 
 export type PlaceType = {
@@ -32,7 +34,10 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <MapComponent place={place} />;
+      <img src={helsinki} alt="Helsinki" />
+      <LandingPage />
+      <MapComponent place={place} />
+      <Routes>{/* <Route path="/" element={< />} /> */}</Routes>
     </div>
   );
 }

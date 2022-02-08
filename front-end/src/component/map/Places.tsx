@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-import MarkerComponent from "./MarkerComponent";
 import Popover from "@mui/material/Popover";
 import Typography from "@mui/material/Typography";
+import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
 
 import { PlaceType } from "../../App";
+import MarkerComponent from "./MarkerComponent";
 
 export type ItemPropType = {
   item: PlaceType;
@@ -54,7 +55,13 @@ function Places({ item }: ItemPropType) {
         <Typography sx={{ p: 2 }}>
           Description: {location.description.body}
         </Typography>
-        <Typography sx={{ p: 2 }}>Website: {location.info_url}</Typography>
+        <Typography>
+          Website:
+          <a href={location.info_url}>
+            <Typography> {location.info_url}</Typography>
+          </a>
+        </Typography>
+        <BookmarkAddIcon />
       </Popover>
     </div>
   );
