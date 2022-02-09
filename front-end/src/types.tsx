@@ -1,8 +1,4 @@
-export type PlacesType = {
-  name: string;
-};
-
-export type EachTypeType = {
+export type PlaceType = {
   id: string;
   name: {
     fi: string;
@@ -24,4 +20,32 @@ export type EachTypeType = {
     body: string;
     intro: string;
   };
+};
+
+export const FetchMap = "fetchMap";
+export const FetchEachPlace = "fetchEachPlace";
+
+export type FetchMapAction = {
+  type: typeof FetchMap;
+  payload: {
+    map: PlaceType[];
+  };
+};
+
+export type FetchEachPlaceAction = {
+  type: typeof FetchEachPlace;
+  payload: {
+    placeDetail: PlaceType;
+  };
+};
+
+export type AllAction = FetchMapAction | FetchEachPlaceAction;
+
+export type MapState = {
+  map: PlaceType[];
+  eachPlace: PlaceType;
+};
+
+export type AppState = {
+  mapState: MapState;
 };
