@@ -1,7 +1,8 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import tram from "../../image/tram.jpeg";
-import map from "../../image/map.jpeg";
+import Typography from "@mui/material/Typography";
+
+import { activity } from "../list/activity";
 
 function Activity() {
   return (
@@ -12,8 +13,14 @@ function Activity() {
         justifyContent: "space-around",
       }}
     >
-      <img src={tram} alt="Helsinki tram" height="200px" width="150px" />
-      <img src={map} alt="Helsinki road" height="200px" width="150px" />
+      {activity.map((item) => {
+        return (
+          <Box>
+            <img src={item} alt={item.name} />
+            <Typography>{item.name}</Typography>
+          </Box>
+        );
+      })}
     </Box>
   );
 }
