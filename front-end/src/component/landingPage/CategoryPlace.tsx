@@ -19,7 +19,7 @@ function CategoryPlace() {
               border-radius="20px"
               src={item.image_link}
               alt={item.name}
-              height="250px"
+              height="255px"
               width="300px"
             />
             <p>{item.name}</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 import { activity } from "../list/activity";
 
@@ -15,9 +16,14 @@ function Activity() {
     >
       {activity.map((item) => {
         return (
-          <Box>
-            <img src={item} alt={item.name} />
-            <Typography>{item.name}</Typography>
+          <Box sx={{ position: "relative" }}>
+            <img src={item.img} alt={item.name} height="400px" width="450px" />
+            <Box
+              sx={{ position: "absolute", overflow: "hidden", top: "250px" }}
+            >
+              <Typography>{item.name}</Typography>
+              <Button>Explore </Button>
+            </Box>
           </Box>
         );
       })}
