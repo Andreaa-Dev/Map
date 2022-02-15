@@ -7,14 +7,7 @@ import helsinki from "./image/helsinki.jpeg";
 import NavBar from "./component/navbar/NavBar";
 import LandingPage from "./component/landingPage";
 import MapComponent from "./component/map/MapComponent";
-
-export type PlaceType = {
-  id: string;
-  location: {
-    lat: number;
-    lon: number;
-  };
-};
+import { PlaceType } from "./types";
 
 function App() {
   const url = "https://andre-map.herokuapp.com/v1/fetchMap";

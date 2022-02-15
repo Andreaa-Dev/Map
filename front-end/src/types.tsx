@@ -43,7 +43,7 @@ export type AllAction = FetchMapAction | FetchEachPlaceAction;
 
 export type MapState = {
   map: PlaceType[];
-  eachPlace: PlaceType;
+  eachPlace: null | PlaceType;
 };
 
 export type AppState = {

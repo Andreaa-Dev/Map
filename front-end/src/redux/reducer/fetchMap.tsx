@@ -1,4 +1,4 @@
-import { AllAction, FetchEachPlace, FetchMap, MapState } from "../../src/types";
+import { AllAction, FetchEachPlace, FetchMap, MapState } from "../../types";
 
 const initialState: MapState = {
   map: [],

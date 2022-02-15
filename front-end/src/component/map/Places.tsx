@@ -4,8 +4,8 @@ import Popover from "@mui/material/Popover";
 import Typography from "@mui/material/Typography";
 import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
 
-import { PlaceType } from "../../App";
 import MarkerComponent from "./MarkerComponent";
+import { PlaceType } from "../../types";
 
 export type ItemPropType = {
   item: PlaceType;

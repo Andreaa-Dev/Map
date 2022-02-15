@@ -1,11 +1,16 @@
 import React from "react";
 import ReactMapboxGl from "react-mapbox-gl";
+import { PlaceType } from "../../types";
 
 import Places from "./Places";
 
+type PlacePropType = {
+  place: PlaceType[];
+};
 function MapComponent({ place }: PlacePropType) {
   const Map = ReactMapboxGl({
-    accessToken: process.env.REACT_APP_MAP_TOKEN,
+    accessToken:
+      "pk.eyJ1IjoiYW5kcmVhMmsiLCJhIjoiY2t6OGd6cGc0MWN6bTJudXNvN205Z2lsMSJ9.cP0F-8mYYwS1QlfO9djtAQ",
   });
 
   const helsinkiCoordinates: [number, number] = [24.945831, 60.192059];

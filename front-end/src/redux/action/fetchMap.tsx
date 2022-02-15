@@ -6,7 +6,7 @@ import {
   FetchMap,
   FetchMapAction,
   PlaceType,
-} from "../../src/types";
+} from "../../types";
 
 export function fetchMap(map: PlaceType[]): FetchMapAction {
   return {
